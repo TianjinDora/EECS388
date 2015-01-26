@@ -1,0 +1,10 @@
+Writeup
+-------
+
+1) Because HMAC doesn't use the construction H(key || message), HMAC hashes using susceptible algorithms are not prone to length extension attacks
+
+Length extension attacks can only be done on hashes with construction H(secret || message) when message and the length of secret is known.
+
+For length extension to work with HMAC, attacker would need to know the token of the inner hash in order to seed the second call to hash, thus the outer application of the hash function masks the intermediate result of the internal hash.
+
+2) Two different programs, one benign and another malicious may share the same MD5 hash. The OS or package manager might check the program's MD5 hash and verify its digital signature, thus confirming falsely that the program has maintained its integrity -- and the malicious software would be verified and executed
