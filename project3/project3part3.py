@@ -37,4 +37,9 @@ for item in ipCounts.items(): print item
 
 for item in ipCounts.items():
 	if item[1]['SYN'] > item[1]['SYNACK'] * 3:
-		print item[0]
+        hexstring = str(item[0].encode('hex'))
+        num = [hexstring[i:i+2] for i in range(0,len(hexstring), 2)]
+        string = ''
+        for x in num:
+            string = string + str(int(x,16)) + '.'
+        print string[:-1]
