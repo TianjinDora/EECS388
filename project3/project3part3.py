@@ -7,11 +7,8 @@ pcap = dpkt.pcap.Reader(f)
 ipCounts = {}
 
 for ts, buf in pcap:
-    try:
-        eth = dpkt.ethernet.Ethernet(buf)
-    except dpkt.UnpackError:
-        print "not an ethernet packet"
-        continue
+    try: eth = dpkt.ethernet.Ethernet(buf)
+    except dpkt.UnpackError: continue
         
     if eth.type != dpkt.ethernet.ETH_TYPE_IP: continue # if not IP packet, continue
     ip = eth.data
@@ -31,12 +28,12 @@ for ts, buf in pcap:
             else:
                 ipCounts[ip.src]['SYN'] += 1
 
-print ipCounts
+#print ipCounts
 
-for item in ipCounts.items(): print item
+#for item in ipCounts.items(): print item
 
 for item in ipCounts.items():
-	if item[1]['SYN'] > item[1]['SYNACK'] * 3:
+    if item[1]['SYN'] > item[1]['SYNACK'] * 3:
         hexstring = str(item[0].encode('hex'))
         num = [hexstring[i:i+2] for i in range(0,len(hexstring), 2)]
         string = ''
