@@ -1,7 +1,10 @@
 import dpkt
 import sys
+import sys
 
-f = open('C:\Users\\nathan\Downloads\lbl-internal.20041004-1305.port002.dump.anon', "rb")
+#filename = 'C:\Users\\nathan\Downloads\lbl-internal.20041004-1305.port002.dump.anon'
+filename = sys.argv[1]
+f = open(filename, "rb")
 pcap = dpkt.pcap.Reader(f)
 
 ipCounts = {}
