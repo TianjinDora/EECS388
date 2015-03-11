@@ -24,15 +24,16 @@ for ts, buf in pcap:
         if packet.flags & dpkt.tcp.TH_SYN != 0: # if it's a SYN packet
             # initialize in dictionary if it doesn't exist
             if ip.src not in ipCounts: ipCounts[ip.src] = {'SYN': 0, 'SYNACK': 0}
+            if ip.dst not in ipCounts: ipCounts[ip.dst] = {'SYN': 0, 'SYNACK': 0}
             
             if packet.flags & dpkt.tcp.TH_ACK != 0: # if it's an ACK packet too
-                ipCounts[ip.src]['SYNACK'] += 1
+                ipCounts[ip.dst]['SYNACK'] += 1
             else:
                 ipCounts[ip.src]['SYN'] += 1
 
 print ipCounts
 
-for item in ipCounts.teims(): print item
+for item in ipCounts.items(): print item
 
 for item in ipCounts.items():
 	if item[1]['SYN'] > item[1]['SYNACK'] * 3:
