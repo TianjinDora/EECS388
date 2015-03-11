@@ -50,6 +50,8 @@ Cipher Suite: TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA (0xc003)
 Cipher Suite: SSL_RSA_FIPS_WITH_3DES_EDE_CBC_SHA (0xfeff)
 Cipher Suite: TLS_RSA_WITH_3DES_EDE_CBC_SHA (0x000a)
 
+Bad: MD5, RC4
+
 d) 
 e) Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
 
