@@ -5,8 +5,8 @@
 2. ISP backbone
 
 3. 
-a) XS4All Archive
-b) Active FTP
+a) 194.109.21.66
+b) Active FTP. The client sends the PORT command which active FTP users
 c) both username and password are not encrypted and vulnerable to unathorized listeners 
 d) FTPS and SFTP
 
