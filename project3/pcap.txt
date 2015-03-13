@@ -1,8 +1,8 @@
-1.	10.0.0.1,
-	10.0.0.2, 
-	10.0.0.3 
+1.	10.0.2.1 (00:26:08:e5:66:07),
+	10.0.2.2 (04:0c:ce:d8:0f:fa), 
+	10.0.2.3 (8c:a9:82:50:f0:a6)
 
-2. ISP backbone
+2. Small, home network. There appear to be 2 ip addresses making http requests, 10.0.2.2 and 10.0.2.3
 
 3. 
 a) 194.109.21.66
@@ -55,4 +55,8 @@ Bad: MD5, RC4
 d) 
 e) Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
 
-5. 8157
+5
+a) The browser is reauthenticated using cookies
+b) The attacker can steal the cookie and use cookie injection to impersonate the victim on facebook
+c) The user should log out after he/she is done with his/her session
+d) The user searched for Zakir Durum and proceeded to message him

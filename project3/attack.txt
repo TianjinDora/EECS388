@@ -1,0 +1,33 @@
+1) 00:12:17:CA:B3:48
+
+2) 
+client: 192.168.1.139
+server: 192.168.1.112
+
+3) 
+client: 
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 5.9p1 Debian 5ubuntu1.4 (Ubuntu Linux; protocol 2.0)
+6666/tcp open  irc?
+6667/tcp open  irc?
+
+server:
+PORT     STATE    SERVICE     VERSION
+21/tcp   open     ftp         vsftpd 2.0.8 or latersubl
+22/tcp   open     ssh         (protocol 2.0)
+80/tcp   open     http        Apache httpd 2.4.7 ((Ubuntu))
+443/tcp  open     ssl/http    Apache httpd 2.4.7 ((Ubuntu))
+3784/tcp filtered bfd-control
+
+4) x3Yliw0fg5ODratoE8q8GVBC2yz7UNZA7fvkef4rbCYVV9lrLfBLBxhQ9npqO3vX4wjsJD+rZQ7eu/797QyLHKj6
+
+5) 
+
+You win! Please submit this, along with an explanation of how you got it for part 2:
+
+x3Yliw0fg5ODratoE8q8GVBC2yz7UNZA7fvkef4rbCYVV9lrLfBLBxhQ9npqO3vX4wjsJD+rZQ7eu/797QyLHKj6
+
+6) 
+Used Kali Linux and Aircrack to crack the wep password by using airmon-ng and dumping the IVs into a dump file and running aircrack on it and the eecs388 MAC address. Next, used wireshark to listen to the network traffic, and filtered ssl traffic. Looked closely at the traffic and identified 192.168.1.112 as the server. Next, ran NMAP on 192.168.1.112 and saw port 21 as an open connection to an ftp server. Connected via ftp and downloaded the secret key (server-w15.key), and used Wireshark in conjunction with the secret key to decrypt the https traffic. This revealed 192.168.1.139 making a GET request to https://192.168.1.112/protected/youwin.py. I then accessed the site and got the token and message in 5).
+
+7) 5 years
