@@ -1,5 +1,5 @@
 import dpkt
-import sys
+import socket
 import sys
 
 #filename = 'C:\Users\\nathan\Downloads\lbl-internal.20041004-1305.port002.dump.anon'
@@ -37,9 +37,4 @@ for ts, buf in pcap:
 
 for item in ipCounts.items():
     if item[1]['SYN'] > item[1]['SYNACK'] * 3:
-        hexstring = str(item[0].encode('hex'))
-        num = [hexstring[i:i+2] for i in range(0,len(hexstring), 2)]
-        string = ''
-        for x in num:
-            string = string + str(int(x,16)) + '.'
-        print string[:-1]
+        print socket.inet_ntoa(item[0])
