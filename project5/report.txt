@@ -1,16 +1,30 @@
 1) Booting normally causes a warning: "THEFT DETECTED, ENGAGING SECURITY SYSTEM" which corrupts the memory of the harddisk and makes it impossible to boot from the disk with the warning "FATAL: No bootable medium found! System Halted"
 
+evidence: question1.png
+
 2) The operating system is Ubuntu 9.04
+
+evidence: question2.png
 
 3) The username of the account is "nefarious"
 
+evidence: question3_1.png, question3_2.png
+
 4) Yes. Nefarious has chatlogs in IRC discussing plans with someone called ACCOMPLICE, who would help him getaway by waiting outside the "dough building" at 3:15AM
 
-5) Yes. It is a file called passwords.zip 
+evidence: question4.png
+
+5) Yes. It is a file called passwords.zip. The password is "warrant"
+
+evidence: password1.txt, password2.txt, password3.txt, password4.txt password5.txt
 
 6) Yes. The suspect has various searches in Amazon for nerf guns and has also searched ehow.com for articles titled "How to buy a nerf gun"
 
+evidence: question6_1.png, question6_2.png
+
 7) Yes. In the bash log, the suspect enters the command rm evil_plan.bmp. The thumbnail for evil_plan.bmp still exists however and depicts a drawing of the suspects plan to kill the hapless victim with what looks like a ranged weapon (nerf gun)
+
+evidence: 
 
 8) 
 
