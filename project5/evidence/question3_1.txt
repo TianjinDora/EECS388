@@ -1,0 +1,14 @@
+FOUND IN /img_forensics_release_w15.raw/vol_vol7/home/nefarious/.irssi/config
+
+settings = {
+  core = {
+    real_name = "
+Nefarious Criminal";
+    user_name = "
+nefarious";
+    nick = "
+nefarious";
+  };
+  "fe-text" = { actlist_sort = "refnum"; };
+  "fe-common/core" = { autolog = "yes"; };
+};
