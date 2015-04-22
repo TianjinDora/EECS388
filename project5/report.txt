@@ -6,26 +6,30 @@ evidence: question1.png
 
 evidence: question2.png
 
-3) The username of the account is "nefarious"
+3) The username of the account is "nefarious". This username is used in auth.log (screenshotted in question3_2.png, and also in the irc config (question3_1.txt))
 
-evidence: question3_1.png, question3_2.png
+evidence: question3_1.txt, question3_2.png, auth.log
 
 4) Yes. Nefarious has chatlogs in IRC discussing plans with someone called ACCOMPLICE, who would help him getaway by waiting outside the "dough building" at 3:15AM
 
-evidence: question4.png
+evidence: #planning.log
 
 5) Yes. It is a file called passwords.zip. The password is "warrant"
 
-evidence: password1.txt, password2.txt, password3.txt, password4.txt password5.txt
+evidence: passwords.zip password1.txt, password2.txt, password3.txt, password4.txt password5.txt
 
-6) Yes. The suspect has various searches in Amazon for nerf guns and has also searched ehow.com for articles titled "How to buy a nerf gun"
+6) Yes. The suspect has various searches in Amazon and ebay for nerf guns and has also searched ehow.com and google for articles like "How to buy a nerf gun" and "best nerf gun". The evidence is contained in formhistory.sqlite and places.sqlite in nefarious' mozilla folder
 
-evidence: question6_1.png, question6_2.png
+evidence: formhistory.sqlite, places.sqlite
 
-7) Yes. In the bash log, the suspect enters the command rm evil_plan.bmp. The thumbnail for evil_plan.bmp still exists however and depicts a drawing of the suspects plan to kill the hapless victim with what looks like a ranged weapon (nerf gun)
+7) Yes. In the .bash_history, the suspect enters the command rm evil_plan.bmp. The thumbnail for evil_plan.bmp still exists however and depicts a drawing of the suspects plan to kill the hapless victim with what looks like a ranged weapon (nerf gun)
 
-evidence: 
+evidence: bash_history, question7_1.png, 22d0c19de013e5009a681dd92e965fbd.png
 
 8) 
 
-9)
+<9/26> <3:15AM> Accomplice waits outside "dough" building
+
+evidence: #planning.log
+
+9) in nefarious/home/desktop there is a folder for msf3 which a metasploit database. Metasploit aims to test vulnerabilities in networks which nefarious could have used to compromise a network.
